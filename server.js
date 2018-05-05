@@ -43,7 +43,9 @@ app.get( '/bad', ( request, response ) => {
     } );
 });
 
-var httpPortNumber = 3000;
+
+var   env = process.env;
+const httpPortNumber = env.PORT ||  3000;
 app.listen( httpPortNumber, serverReady );
 
 
